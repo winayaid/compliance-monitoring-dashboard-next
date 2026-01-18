@@ -1,4 +1,4 @@
-# Next.js Feature-Based Boilerplate
+# Next.js Feature-Based Boilerplate by Winayaid
 
 This boilerplate uses a feature-based architecture to help you build scalable web apps in Next.js. Instead of organizing by technical layers, code is grouped by business features so each feature stays cohesive and easy to grow.
 
