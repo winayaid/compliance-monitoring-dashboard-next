@@ -1,0 +1,79 @@
+{
+  "stats": [
+    { "label": "Total patients", "value": 1230, "change": 13.4, "trend": "up" },
+    { "label": "New patients", "value": 4212, "change": -3.2, "trend": "down" },
+    { "label": "Appointments", "value": 2243, "change": 0.4, "trend": "up" },
+    { "label": "Doctors", "value": 24, "change": 2.8, "trend": "up" }
+  ],
+  "chart": [
+    { "month": "Jan", "selfCare": 160, "intermediateCare": 120, "totalCare": 90 },
+    { "month": "Feb", "selfCare": 190, "intermediateCare": 130, "totalCare": 100 },
+    { "month": "Mar", "selfCare": 140, "intermediateCare": 110, "totalCare": 80 },
+    { "month": "Apr", "selfCare": 170, "intermediateCare": 125, "totalCare": 92 },
+    { "month": "May", "selfCare": 150, "intermediateCare": 118, "totalCare": 85 },
+    { "month": "Jun", "selfCare": 210, "intermediateCare": 140, "totalCare": 115 },
+    { "month": "Jul", "selfCare": 120, "intermediateCare": 95, "totalCare": 70 },
+    { "month": "Aug", "selfCare": 160, "intermediateCare": 110, "totalCare": 86 },
+    { "month": "Sep", "selfCare": 155, "intermediateCare": 116, "totalCare": 92 },
+    { "month": "Oct", "selfCare": 180, "intermediateCare": 128, "totalCare": 98 },
+    { "month": "Nov", "selfCare": 165, "intermediateCare": 120, "totalCare": 90 },
+    { "month": "Dec", "selfCare": 175, "intermediateCare": 132, "totalCare": 104 }
+  ],
+  "appointments": [
+    {
+      "id": "apt-1",
+      "title": "Patient consultation",
+      "time": "10:00 AM - 10:20 AM",
+      "doctor": "Dr. Olivia Bennett",
+      "duration": "20 min"
+    },
+    {
+      "id": "apt-2",
+      "title": "Follow-up appointment",
+      "time": "09:00 AM - 09:30 AM",
+      "doctor": "Dr. Sophia Patel",
+      "duration": "30 min"
+    },
+    {
+      "id": "apt-3",
+      "title": "Cardiology review",
+      "time": "01:30 PM - 02:10 PM",
+      "doctor": "Dr. Lucas Wright",
+      "duration": "40 min"
+    }
+  ],
+  "tests": [
+    {
+      "id": "test-1",
+      "patient": "Jeffrey Hudson",
+      "test": "Blood analysis",
+      "status": "In Progress",
+      "date": "12/26/2025",
+      "time": "10:24 AM"
+    },
+    {
+      "id": "test-2",
+      "patient": "Kristy Bahringer",
+      "test": "Cardiogram",
+      "status": "Completed",
+      "date": "12/26/2025",
+      "time": "11:02 AM"
+    },
+    {
+      "id": "test-3",
+      "patient": "Greg Frami",
+      "test": "Hormones",
+      "status": "Completed",
+      "date": "12/26/2025",
+      "time": "11:45 AM"
+    },
+    {
+      "id": "test-4",
+      "patient": "Diane Dickens",
+      "test": "Blood analysis",
+      "status": "Pending",
+      "date": "12/26/2025",
+      "time": "12:10 PM"
+    }
+  ]
+}

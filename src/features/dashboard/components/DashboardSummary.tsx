@@ -1,23 +1,27 @@
-"use client"
-
-import { useDashboard } from "../hooks/useDashboard"
+import { AppointmentsCard } from "./AppointmentsCard"
+import { DashboardHeader } from "./DashboardHeader"
+import { DashboardTabs } from "./DashboardTabs"
+import { PatientsChartCard } from "./PatientsChartCard"
+import { QuickAddForm } from "./QuickAddForm"
+import { ResultsTable } from "./ResultsTable"
+import { StatsCards } from "./StatsCards"
 
 export function DashboardSummary() {
-  const { stats } = useDashboard()
-
   return (
-    <section className="grid gap-4 md:grid-cols-3">
-      {stats.map((stat) => (
-        <div
-          key={stat.label}
-          className="rounded-xl border border-zinc-200 bg-white p-4"
-        >
-          <p className="text-xs uppercase text-zinc-500">{stat.label}</p>
-          <p className="mt-2 text-2xl font-semibold text-zinc-900">
-            {stat.value}
-          </p>
+    <div className="space-y-6">
+      <DashboardHeader />
+      <DashboardTabs />
+      <StatsCards />
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+        <div className="space-y-6">
+          <PatientsChartCard />
+          <ResultsTable />
         </div>
-      ))}
-    </section>
+        <div className="space-y-6">
+          <QuickAddForm />
+          <AppointmentsCard />
+        </div>
+      </div>
+    </div>
   )
 }
