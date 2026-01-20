@@ -1,12 +1,10 @@
 import {
-  Bell,
-  CalendarDays,
-  CreditCard,
+  AlertTriangle,
+  Building2,
   FileText,
   LayoutGrid,
-  MessageCircle,
+  LifeBuoy,
   Settings,
-  Stethoscope,
   Users,
 } from "lucide-react"
 
@@ -20,17 +18,44 @@ export const navigation = {
   ],
   dashboard: {
     main: [
-      { label: "Dashboard", href: routes.dashboard, icon: LayoutGrid },
-      { label: "Patients", href: "/dashboard/patients", icon: Users },
-      { label: "Appointments", href: "/dashboard/appointments", icon: CalendarDays },
-      { label: "Messages", href: "/dashboard/messages", icon: MessageCircle, badge: "24" },
-      { label: "Analytics", href: "/dashboard/analytics", icon: Stethoscope },
-      { label: "Billing & Payments", href: "/dashboard/billing", icon: CreditCard },
-      { label: "Documents", href: "/dashboard/documents", icon: FileText },
+      {
+        label: "Dashboard",
+        href: routes.dashboard,
+        icon: LayoutGrid,
+      },
+      {
+        label: "Violations",
+        href: "/dashboard/violations",
+        icon: AlertTriangle,
+      },
+      {
+        label: "Branches",
+        href: "/dashboard/branches",
+        icon: Building2,
+      },
+      {
+        label: "Reports",
+        href: "/dashboard/reports",
+        icon: FileText,
+        badge: "24",
+      },
+      {
+        label: "Users",
+        href: "/dashboard/users",
+        icon: Users,
+      },
     ],
     other: [
-      { label: "Settings", href: "/dashboard/settings", icon: Settings },
-      { label: "Help Center", href: "/dashboard/help", icon: Bell },
+      {
+        label: "Settings",
+        href: "/dashboard/settings",
+        icon: Settings,
+      },
+      {
+        label: "Help Center",
+        href: "/dashboard/help",
+        icon: LifeBuoy,
+      },
     ],
   },
 }

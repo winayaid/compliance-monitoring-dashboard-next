@@ -7,7 +7,7 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
   Search,
-  Sparkles,
+  ShieldCheck,
 } from "lucide-react"
 
 import { navigation } from "@/config/navigation"
@@ -29,11 +29,11 @@ export function Sidebar() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 text-zinc-900">
             <span className="flex size-9 items-center justify-center rounded-xl bg-indigo-500 text-white">
-              <Sparkles className="size-5" />
+              <ShieldCheck className="size-5" />
             </span>
             <div className={collapsed ? "hidden" : "block"}>
-              <p className="text-sm font-semibold">PulseHub</p>
-              <p className="text-xs text-zinc-500">Care dashboard</p>
+              <p className="text-sm font-semibold">RegulaSight</p>
+              <p className="text-xs text-zinc-500">Compliance Monitoring</p>
             </div>
           </div>
           <button
