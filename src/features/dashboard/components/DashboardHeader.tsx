@@ -10,7 +10,7 @@ export function DashboardHeader() {
           Dashboard
         </p>
         <h1 className="text-2xl font-semibold text-zinc-900 md:text-3xl">
-          Patient reports always update in real time
+          Compliance reports are updated in real time
         </h1>
       </div>
       <div className="flex flex-wrap items-center gap-2">

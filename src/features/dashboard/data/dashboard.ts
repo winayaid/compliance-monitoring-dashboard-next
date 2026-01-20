@@ -14,6 +14,16 @@ export type ChartDatum = {
   totalCare: number
 }
 
+export type ViolationsTrendDatum = {
+  dateRange: string
+  value: number
+}
+
+export type RiskLevelDatum = {
+  level: "Low" | "Medium" | "High"
+  value: number
+}
+
 export type Appointment = {
   id: string
   title: string
@@ -31,10 +41,23 @@ export type TestResult = {
   time: string
 }
 
+export type RecentViolation = {
+  id: string
+  violation: string
+  branch: string
+  risk: "Low" | "Medium" | "High"
+  status: "Open" | "In Review" | "Resolved"
+  date: string
+  time: string
+}
+
 export type DashboardData = {
   stats: DashboardStat[]
   chart: ChartDatum[]
+  violationsTrend: ViolationsTrendDatum[]
+  riskLevels: RiskLevelDatum[]
   appointments: Appointment[]
+  recentViolations: RecentViolation[]
   tests: TestResult[]
 }
 
