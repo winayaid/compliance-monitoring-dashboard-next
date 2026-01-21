@@ -1,0 +1,69 @@
+export type BranchRiskDatum = {
+  id: string
+  branch: string
+  region: string
+  manager: string
+  riskScore: number
+  complianceRate: number
+  openViolations: number
+  lastAudit: string
+  status: "Stable" | "Watch" | "Critical"
+}
+
+export const branchRiskData: BranchRiskDatum[] = [
+  {
+    id: "branch-1",
+    branch: "Jakarta Central",
+    region: "Jakarta",
+    manager: "Anya Setiawan",
+    riskScore: 78,
+    complianceRate: 88,
+    openViolations: 14,
+    lastAudit: "12 Jan 2026",
+    status: "Critical",
+  },
+  {
+    id: "branch-2",
+    branch: "Bandung",
+    region: "West Java",
+    manager: "Bima Herlambang",
+    riskScore: 61,
+    complianceRate: 91,
+    openViolations: 9,
+    lastAudit: "04 Jan 2026",
+    status: "Watch",
+  },
+  {
+    id: "branch-3",
+    branch: "Surabaya",
+    region: "East Java",
+    manager: "Nadia Hartono",
+    riskScore: 52,
+    complianceRate: 93,
+    openViolations: 7,
+    lastAudit: "28 Dec 2025",
+    status: "Watch",
+  },
+  {
+    id: "branch-4",
+    branch: "Medan",
+    region: "North Sumatra",
+    manager: "Rafi Pratama",
+    riskScore: 39,
+    complianceRate: 96,
+    openViolations: 4,
+    lastAudit: "19 Dec 2025",
+    status: "Stable",
+  },
+  {
+    id: "branch-5",
+    branch: "Denpasar",
+    region: "Bali",
+    manager: "Made Kusuma",
+    riskScore: 28,
+    complianceRate: 98,
+    openViolations: 3,
+    lastAudit: "14 Dec 2025",
+    status: "Stable",
+  },
+]
