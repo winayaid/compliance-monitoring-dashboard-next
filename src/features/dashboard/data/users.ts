@@ -1,0 +1,72 @@
+export type UserRole =
+  | "Compliance Officer"
+  | "Risk Analyst"
+  | "Branch Manager"
+  | "Audit Lead"
+  | "Quality Reviewer"
+
+export type UserStatus = "Active" | "On Leave" | "Pending"
+
+export type UserRecord = {
+  id: string
+  name: string
+  email: string
+  branch: string
+  role: UserRole
+  openCases: number
+  lastActive: string
+  status: UserStatus
+}
+
+export const usersData: UserRecord[] = [
+  {
+    id: "user-1",
+    name: "Alya Prasetyo",
+    email: "alya.prasetyo@compliance.co.id",
+    branch: "Jakarta Central",
+    role: "Compliance Officer",
+    openCases: 6,
+    lastActive: "Today, 09:12",
+    status: "Active",
+  },
+  {
+    id: "user-2",
+    name: "Bintang Mahesa",
+    email: "bintang.mahesa@compliance.co.id",
+    branch: "Bandung",
+    role: "Risk Analyst",
+    openCases: 4,
+    lastActive: "Yesterday, 16:40",
+    status: "Active",
+  },
+  {
+    id: "user-3",
+    name: "Nadira Putri",
+    email: "nadira.putri@compliance.co.id",
+    branch: "Surabaya",
+    role: "Branch Manager",
+    openCases: 9,
+    lastActive: "Today, 11:05",
+    status: "Active",
+  },
+  {
+    id: "user-4",
+    name: "Raka Wijaya",
+    email: "raka.wijaya@compliance.co.id",
+    branch: "Medan",
+    role: "Audit Lead",
+    openCases: 3,
+    lastActive: "2 days ago",
+    status: "On Leave",
+  },
+  {
+    id: "user-5",
+    name: "Salsa Rahayu",
+    email: "salsa.rahayu@compliance.co.id",
+    branch: "Denpasar",
+    role: "Quality Reviewer",
+    openCases: 5,
+    lastActive: "Today, 08:30",
+    status: "Pending",
+  },
+]

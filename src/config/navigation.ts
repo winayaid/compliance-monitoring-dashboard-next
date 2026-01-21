@@ -37,7 +37,6 @@ export const navigation = {
         label: "Reports",
         href: "/dashboard/reports",
         icon: FileText,
-        badge: "24",
       },
       {
         label: "Users",

@@ -46,7 +46,7 @@ export function UpdateStatusPanel({
         Log progress and keep the compliance team aligned.
       </p>
       <div className="mt-4 rounded-xl border border-zinc-200/70 bg-zinc-50/70 p-4">
-        <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+        <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
           Current status
         </p>
         <p className="mt-1 text-sm font-semibold text-zinc-900">
@@ -96,7 +96,7 @@ export function UpdateStatusPanel({
       </div>
       <div className="mt-4 space-y-3">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+          <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Update note
           </p>
           <textarea
@@ -105,7 +105,7 @@ export function UpdateStatusPanel({
           />
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+          <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Notify
           </p>
           <Input

@@ -20,7 +20,7 @@ export function DashboardHeader() {
         </Button>
         <Button className="bg-indigo-500 text-white hover:bg-indigo-600">
           <Plus className="size-4" />
-          Add Doctor
+          Add Violation
         </Button>
         <Button
           variant="outline"

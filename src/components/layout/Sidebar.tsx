@@ -79,11 +79,11 @@ export function Sidebar() {
                       {item.label}
                     </span>
                   </span>
-                  {!collapsed && item.badge ? (
+                  {/* {!collapsed && item.badge ? (
                     <span className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-semibold text-indigo-600">
                       {item.badge}
                     </span>
-                  ) : null}
+                  ) : null} */}
                 </Link>
               )
             })}
@@ -118,7 +118,7 @@ export function Sidebar() {
             })}
           </nav>
         </div>
-        <div
+        {/* <div
           className={[
             "rounded-2xl border border-indigo-100 bg-indigo-50/70 text-sm text-indigo-900",
             collapsed ? "hidden" : "p-4",
@@ -134,7 +134,7 @@ export function Sidebar() {
           >
             Upgrade plan
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="flex items-center justify-between border-t border-zinc-200/80 pt-4">
         <div className={collapsed ? "hidden" : "block"}>

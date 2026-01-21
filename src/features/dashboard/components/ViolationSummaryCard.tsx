@@ -26,7 +26,7 @@ export function ViolationSummaryCard({
     <section className="rounded-2xl border border-zinc-200/80 bg-white/90 p-5 shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">
             Violation summary
           </p>
           <h2 className="mt-2 text-xl font-semibold text-zinc-900">
@@ -49,44 +49,40 @@ export function ViolationSummaryCard({
       </div>
       <div className="mt-5 grid gap-4 text-sm text-zinc-600 sm:grid-cols-2 lg:grid-cols-3">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Location
+          <p className="text-xs text-zinc-500 font-medium">Location</p>
+          <p className="mt-1 text-sm font-semibold  text-zinc-900">
+            {detail.location}
           </p>
-          <p className="mt-1 font-medium text-zinc-900">{detail.location}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Category
+          <p className="text-xs text-zinc-500 font-medium">Category</p>
+          <p className="mt-1 text-sm font-semibold  text-zinc-900">
+            {detail.category}
           </p>
-          <p className="mt-1 font-medium text-zinc-900">{detail.category}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Regulation
+          <p className="text-xs text-zinc-500 font-medium">Regulation</p>
+          <p className="mt-1 text-sm font-semibold  text-zinc-900">
+            {detail.regulation}
           </p>
-          <p className="mt-1 font-medium text-zinc-900">{detail.regulation}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Assigned to
-          </p>
-          <p className="mt-1 font-medium text-zinc-900">
+          <p className="text-xs text-zinc-500 font-medium">Assigned to</p>
+          <p className="mt-1 text-sm font-semibold  text-zinc-900">
             {detail.assignedTo}
           </p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Last updated
-          </p>
-          <p className="mt-1 font-medium text-zinc-900">
+          <p className="text-xs text-zinc-500 font-medium">Last updated</p>
+          <p className="mt-1 text-sm font-semibold  text-zinc-900">
             {detail.lastUpdated}
           </p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Impact
+          <p className="text-xs text-zinc-500 font-medium">Impact</p>
+          <p className="mt-1 text-sm font-semibold  text-zinc-900">
+            {detail.impact}
           </p>
-          <p className="mt-1 font-medium text-zinc-900">{detail.impact}</p>
         </div>
       </div>
     </section>
