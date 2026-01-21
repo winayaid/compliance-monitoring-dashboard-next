@@ -7,9 +7,10 @@ import {
   useReactTable,
   type ColumnDef,
 } from "@tanstack/react-table"
-import { MoreHorizontal } from "lucide-react"
+import { MoreHorizontal, Search } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { dashboardData, type RecentViolation } from "../data/dashboard"
 
 const statusStyles: Record<RecentViolation["status"], string> = {
@@ -24,7 +25,7 @@ const riskStyles: Record<RecentViolation["risk"], string> = {
   High: "bg-rose-100 text-rose-700",
 }
 
-export function RecentViolationsTable() {
+export function ViolationsTable() {
   const columns = useMemo<ColumnDef<RecentViolation>[]>(
     () => [
       {
@@ -93,7 +94,7 @@ export function RecentViolationsTable() {
         ),
       },
     ],
-    []
+    [],
   )
 
   // eslint-disable-next-line react-hooks/incompatible-library
@@ -106,17 +107,30 @@ export function RecentViolationsTable() {
   return (
     <section className="rounded-2xl border border-zinc-200/80 bg-white/90 p-4 shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm font-semibold text-zinc-900">
-          Recent violations
-        </p>
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" className="bg-white text-zinc-600">
-            Month
-          </Button>
-          <Button variant="outline" size="sm" className="bg-white text-zinc-600">
-            Sort
-          </Button>
+        <div>
+          <p className="text-sm font-semibold text-zinc-900">Violations</p>
+          <p className="text-xs text-zinc-500">
+            Latest compliance incidents across branches
+          </p>
         </div>
+        <Button variant="outline" size="sm" className="bg-white text-zinc-600">
+          Export
+        </Button>
+      </div>
+      <div className="mt-4 flex flex-wrap items-center gap-3 rounded-xl border border-zinc-200/70 bg-zinc-50/70 p-3">
+        <div className="relative min-w-55 flex-1">
+          <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-400" />
+          <Input placeholder="Search violations" className="bg-white pl-9" />
+        </div>
+        <Button variant="outline" size="sm" className="bg-white text-zinc-600">
+          Risk
+        </Button>
+        <Button variant="outline" size="sm" className="bg-white text-zinc-600">
+          Status
+        </Button>
+        <Button variant="outline" size="sm" className="bg-white text-zinc-600">
+          Date
+        </Button>
       </div>
       <div className="mt-4 overflow-x-auto">
         <table className="min-w-full text-left text-sm">
@@ -133,7 +147,7 @@ export function RecentViolationsTable() {
                       ? null
                       : flexRender(
                           header.column.columnDef.header,
-                          header.getContext()
+                          header.getContext(),
                         )}
                   </th>
                 ))}
