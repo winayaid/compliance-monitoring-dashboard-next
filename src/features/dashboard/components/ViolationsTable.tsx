@@ -8,6 +8,7 @@ import {
   type ColumnDef,
 } from "@tanstack/react-table"
 import { MoreHorizontal, Search } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -26,6 +27,7 @@ const riskStyles: Record<RecentViolation["risk"], string> = {
 }
 
 export function ViolationsTable() {
+  const { push } = useRouter()
   const columns = useMemo<ColumnDef<RecentViolation>[]>(
     () => [
       {
@@ -88,7 +90,12 @@ export function ViolationsTable() {
         header: "",
         id: "actions",
         cell: () => (
-          <Button variant="ghost" size="icon" aria-label="More actions">
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label="More actions"
+            onClick={(event) => event.stopPropagation()}
+          >
             <MoreHorizontal className="size-4" />
           </Button>
         ),
@@ -156,7 +163,20 @@ export function ViolationsTable() {
           </thead>
           <tbody>
             {table.getRowModel().rows.map((row) => (
-              <tr key={row.id} className="border-t border-zinc-100">
+              <tr
+                key={row.id}
+                className="cursor-pointer border-t border-zinc-100 transition hover:bg-zinc-50"
+                onClick={() => push(`/dashboard/violations/${row.original.id}`)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault()
+                    push(`/dashboard/violations/${row.original.id}`)
+                  }
+                }}
+                role="link"
+                tabIndex={0}
+                aria-label={`View details for ${row.original.violation}`}
+              >
                 {row.getVisibleCells().map((cell) => (
                   <td key={cell.id} className="px-3 py-3">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
