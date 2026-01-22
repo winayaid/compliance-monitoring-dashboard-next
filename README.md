@@ -37,9 +37,7 @@ This project was built using the following boilerplate:
 
 ![Report](/public/demo/report.png)
 
-```
 ![User](/public/demo/user.png)
-```
 
 ## How It Works (Feature-Based Architecture)
 
