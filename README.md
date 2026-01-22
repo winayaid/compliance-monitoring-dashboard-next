@@ -23,31 +23,19 @@ A feature-based Next.js dashboard focused on compliance monitoring workflows. Th
 
 This project was built using the following boilerplate:
 
-- `https://github.com/winayaid/nextjs-boilerplate`
+- [nextjs-boilerplate](https://github.com/winayaid/nextjs-boilerplate)
 
 ## UI Demo
 
-_Add an image of the UI demo here:_
-
-```
 ![Dashboard](/public/demo/dashboard.png)
-```
 
-```
 ![Violations](/public/demo/violations.png)
-```
 
-```
 ![Violation Detail](/public/demo/violation-detail.png)
-```
 
-```
 ![Branch](/public/demo/branch.png)
-```
 
-```
 ![Report](/public/demo/report.png)
-```
 
 ```
 ![User](/public/demo/user.png)
