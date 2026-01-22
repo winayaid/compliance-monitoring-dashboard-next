@@ -1,18 +1,63 @@
-# Next.js Feature-Based Boilerplate by Winayaid
+# Compliance Monitoring Dashboard
 
-This boilerplate uses a feature-based architecture to help you build scalable web apps in Next.js. Instead of organizing by technical layers, code is grouped by business features so each feature stays cohesive and easy to grow.
+A feature-based Next.js dashboard focused on compliance monitoring workflows. The project organizes UI, logic, and data access by feature so the codebase stays scalable and easy to maintain.
 
-## Why Feature-Based Architecture
+## Built With
 
-Feature-based architecture organizes code around user-facing capabilities (e.g., Dashboard, Auth, Posts) rather than by type (components, hooks, services). Each feature owns its UI, logic, and data access, which keeps changes isolated and improves team velocity.
+- **Next.js** (App Router) as the main framework
+- **React** for UI
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
 
-Key benefits:
+## Key Libraries
 
-- Improved scalability as features grow independently.
-- Better maintainability through focused, self-contained modules.
-- Easier reuse of feature logic and components.
+- **Recharts** for charts and data visualization
+- **TanStack Table** for advanced table features
+- **React Hook Form** for form state management
+- **Zod** for schema validation
+- **Radix UI Slot** for composition-friendly UI primitives
+- **Lucide React** for iconography
+- **class-variance-authority**, **clsx**, and **tailwind-merge** for class composition and Tailwind utilities
 
-## Suggested Structure
+## Based on Boilerplate
+
+This project was built using the following boilerplate:
+
+- `https://github.com/winayaid/nextjs-boilerplate`
+
+## UI Demo
+
+_Add an image of the UI demo here:_
+
+```
+![Dashboard](/public/demo/dashboard.png)
+```
+
+```
+![Violations](/public/demo/violations.png)
+```
+
+```
+![Violation Detail](/public/demo/violation-detail.png)
+```
+
+```
+![Branch](/public/demo/branch.png)
+```
+
+```
+![Report](/public/demo/report.png)
+```
+
+```
+![User](/public/demo/user.png)
+```
+
+## How It Works (Feature-Based Architecture)
+
+Feature-based architecture organizes code around user-facing capabilities (e.g., Dashboard, Auth, Users) rather than by technical layers. Each feature owns its UI, logic, and data access, keeping changes isolated and improving team velocity.
+
+Suggested structure:
 
 ```
 /src
@@ -28,13 +73,6 @@ Key benefits:
       services
       index.ts
 ```
-
-## How It Works Here
-
-- Feature code lives under `src/features`.
-- Each feature can include its own components, hooks, services, and state.
-
-This keeps feature logic encapsulated while still allowing shared UI and utilities.
 
 ## Running the App
 
@@ -71,7 +109,10 @@ pnpm build
 pnpm start
 ```
 
-## Notes
+## Contributing
 
-- Keep feature boundaries clear to avoid tight coupling.
-- Prefer feature-level hooks/services for business logic.
+Contributions are welcome. If you'd like to contribute, please open an issue or pull request with a clear description of the change.
+
+If you want to use this project for commercial purposes, please contact me first.
+
+If this project helps you, please give the repo a star to support the developer community.
